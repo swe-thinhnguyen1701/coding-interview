@@ -62,12 +62,12 @@ public class IsUnique {
 
         for(int i = 0; i < string.length(); i++) {
             if(occurrence[string.charAt(i) - 'a']) {
-                return true;
+                return false;
             }
             occurrence[string.charAt(i) - 'a'] = true;
         }
 
-        return false;
+        return true;
     }
 
     /**
@@ -80,15 +80,16 @@ public class IsUnique {
 
         for(int i = 0; i < string.length(); i++) {
             if(occurrence[string.charAt(i) - 'A']) {
-                return true;
+                return false;
             }
             occurrence[string.charAt(i) - 'A'] = true;
         }
 
-        return false;
+        return true;
     }
 
     /**
+     * When a string has only alphabet characters but mixed between uppercase and lowercase.
      *
      * @return true if they have a duplicate letter, otherwise false
      */
@@ -99,34 +100,40 @@ public class IsUnique {
         for(int i = 0; i < string.length(); i++) {
             if(isLowercase(string.charAt(i))) {
                 if(lowercase[string.charAt(i) - 'a']) {
-                    return true;
+                    return false;
                 }
                 lowercase[string.charAt(i) - 'a'] = true;
             } else {
                 if(uppercase[string.charAt(i) - 'A']) {
-                    return true;
+                    return false;
                 }
 
                 uppercase[string.charAt(i) - 'A'] = true;
             }
         }
 
-        return false;
+        return true;
     }
 
 //    FINAL ANSWER
+    /**
+     * General solution handles all 256 characters in LATIN
+     *
+     * @return false if they have a duplicate letter, otherwise true
+     */
     public boolean isUnique() {
         boolean[] occurrence = new boolean[256];
 
         for(int i = 0; i < string.length(); i++) {
             if(occurrence[string.charAt(i) - 'a']) {
-                return true;
+                return false;
             }
             occurrence[string.charAt(i) - 'a'] = true;
         }
 
-        return false;
+        return true;
     }
+
 
     private boolean isLowercase(char c) {
         return c - 'a' > -1 && c - 'a' < 26;
