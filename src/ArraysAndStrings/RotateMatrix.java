@@ -32,7 +32,7 @@ package ArraysAndStrings;
  * [8, 9, 4]  →  [8, 9, 2]  →  [8, 9, 2]  →  [6, 9, 2]
  * [7, 6, 5]     [7, 6, 5]     [7, 4, 3]     [5, 4, 3]
  *
- * 
+ *
  */
 
 public class RotateMatrix {
