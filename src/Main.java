@@ -1,18 +1,23 @@
 import ArraysAndStrings.*;
+import LinkedLists.Node;
+import LinkedLists.RemoveDups;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-       var test = new ZeroMatrix();
-       int[][] matrix = {{0, 1, 1}, {1, 1, 1}, {1, 1, 0}};
-       test.buildZeroMatrix(matrix);
-       for(int i = 0; i < matrix.length; i++){
-           for(int j = 0; j < matrix[0].length; j++){
-               System.out.print(matrix[i][j] + " ");
-           }
-           System.out.println();
+       var head = new Node(3);
+       var install = head;
+       install.next = new Node(1);
+       install = install.next;
+       install.next = new Node(1);
+
+       var test =new RemoveDups();
+       test.removeDups(head);
+       while(head!=null){
+           System.out.print(head.val + " ");
+           head = head.next;
        }
     }
 }
