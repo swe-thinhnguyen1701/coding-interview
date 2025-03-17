@@ -14,7 +14,7 @@ public class Main {
        install.next = new Node(1);
 
        var test =new RemoveDups();
-       test.removeDups(head);
+       test.removeDups2(head);
        while(head!=null){
            System.out.print(head.val + " ");
            head = head.next;

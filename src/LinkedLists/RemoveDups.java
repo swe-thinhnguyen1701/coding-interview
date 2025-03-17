@@ -62,13 +62,17 @@ public class RemoveDups {
         if(head == null)
             return;
 
-        while(head.next != null) {
+        while(head != null) {
             Node copyHead = head;
             while(copyHead.next != null) {
                 if (copyHead.next.val == head.val) {
-                    
+                    head.next = head.next.next;
+                } else {
+                    copyHead = copyHead.next;
                 }
             }
+
+            head = head.next;
         }
     }
 }
