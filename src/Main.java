@@ -9,5 +9,6 @@ public class Main {
        var head = new Node(1, new Node(2));
        var test =  new Palindrome();
        System.out.println(test.isPalindrome(head));
+//        System.out.println(1 | 1);
     }
 }
