@@ -129,7 +129,7 @@ package LinkedLists;
  * Time Complexity:
  * The first iteration will take O(N), where N is the number of nodes.
  * The second iteration takes O(M), where M is a distance from head to the beginning of the loop.
- * Therefore, total time complexity is O(N + M) = O(N) (Since M <= N)   
+ * Therefore, total time complexity is O(N + M) = O(N) (Since M <= N)
  *
  * Space Complexity:
  * I don't use extra space, so it remains O(1).
