@@ -12,7 +12,7 @@ import java.util.Stack;
  * should return the same values as it would if there were just a single stack.
  *
  * With this problem, I will use HashMap to store all stacks because the accessing and adding time is constant.
- * I will need 4 variables:
+ * I will need 3 variables:
  * idx: is used to access a stack from hashmap
  * capacity: determine the maximum number of elements of each stack.
  * hm: is a hashmap that store Stack as a value and key as an idx.
